@@ -1,0 +1,117 @@
+﻿@model IEnumerable<ShopifyModel.PriceRuleModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceRuleTableId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.target_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.target_selection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.allocation_method)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.value_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.once_per_customer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usage_limit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer_selection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.allocation_limit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.starts_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ends_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updated_at)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceRuleTableId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.target_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.target_selection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.allocation_method)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.value_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.once_per_customer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usage_limit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_selection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.allocation_limit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.starts_at)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ends_at)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created_at)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updated_at)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
